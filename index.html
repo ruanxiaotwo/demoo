@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 定义虚拟的“窗口”，内容：宽度等于物理设备上的真实分辨率，初始比例为1:1，不允许用户缩放 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="bootstrap/js/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style>
+/*.navbar-inverse{
+	background: blue;
+}*/
+.footer-colors{
+	background: #101010;
+	opacity:0.7;
+}
+.mgt{
+	margin-top: 51 px;
+}
+/*nav{
+	opacity:0.5;
+}*/
+</style>
+<body>
+<!-- 1.是黑色的2.是固定在顶部的3.缩小可折叠的 -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<!-- navbar      导航栏的基类，用于<nav>元素
+	navbar-inverse     指定导航条组件为黑色主题
+	navbar-fixed-top    导航栏固定在顶部
+	 -->
+		<div class="container">
+		<!-- 是<nav>的子元素。导航栏内容都放入其中 -->
+			<div class="navbar-header">
+			<!-- navbar-header     导航栏头部样式 -->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#a">
+				<!-- navbar-toggle   设置button元素为导航条组件的切换钮
+				collapsed  设置button元素为在视口小于768px时才显示 -->
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button> 
+				<!-- navbar-brand   设置导航条组件内的品牌图标 -->
+				<a href="#" class="navbar-brand">Yang</a>
+			</div>
+			<div class="collapse navbar-collapse" id="a"> 
+			<!-- collapse  设置div元素为在视口大于768px时才显示
+			navbar-collapse 是折叠导航栏样式。给ul的父元素加 -->
+				<ul class="nav navbar-nav">
+				<!-- nav     是导航栏的链接基类。用于<ul>元素
+				navbar-nav    是导航栏的链接样式。用于<ul>元素 -->
+					<li><a href="#">百度</a></li>
+					<li><a href="#">新浪</a></li>
+					<li><a href="#">淘宝</a></li>
+					<li><a href="#">城建</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
+
+	<div id="carousel-example-generic" class="carousel slide mgt" data-ride="carousel">
+	  <!-- 图片轮播 indicators指标 -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+	  </ol>
+	  <!-- Wrapper for slides  inner内部的-->
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <img src="images/1.png" alt="图1">
+	      <div class="carousel-caption"><!-- 添加标题 -->
+	         <h4>让未来，现在就来！</h4>
+	         <h4>Let the future come now！</h4>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="images/2.png" alt="图2">
+	      <div class="carousel-caption">
+	        <h4>握不住的沙，就干脆扬了它！</h4>
+	        <h4>Can not hold the sand,simply lift it!</h4>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="images/3.jpg" alt="图3">
+	      <div class="carousel-caption">
+	        <h4>你需要的只是一颗勇敢的心！</h4>
+	        <h4>All you need is a brave heart！</h4>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="images/4.jpg" alt="图4">
+	      <div class="carousel-caption">
+	        <h4>心有多大，世界就有多大！</h4>
+	        <h4>How big is the heart, how big the world is!</h4>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="images/5.jpg" alt="图5">
+	      <div class="carousel-caption">
+	        <h4>目光能看多远，你就能走多远！</h4>
+	        <h4>Look how far you can go！</h4>
+	      </div>
+	    </div>
+	  </div>
+	  <!-- Controls slide幻灯片 aria-hidden="true"图标可访问性 用于屏幕阅读器的，帮助残障人士更好的访问网站-->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+</div><br>
+
+	<div class="container" >
+	   <div class="row">
+		      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+		      	  <img src="images/tm-600x300-01.jpg" class="img-responsive">
+		      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-info">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-01.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+		      </div>
+
+		      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+		      	  <img src="images/tm-600x300-02.jpg" class="img-responsive">
+		      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-02.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+		      </div>
+
+		      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	      	  <img src="images/tm-600x300-03.jpg" class="img-responsive">
+	      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-03.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+	          </div>
+
+	          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	      	  <img src="images/tm-600x300-03.jpg" class="img-responsive">
+	      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-03.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+	          </div>
+
+	          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	      	  <img src="images/tm-600x300-03.jpg" class="img-responsive">
+	      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-03.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+	          </div>
+
+	          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	      	  <img src="images/tm-600x300-03.jpg" class="img-responsive">
+	      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-03.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+	          </div>
+
+	          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	      	  <img src="images/tm-600x300-03.jpg" class="img-responsive">
+	      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-03.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+	          </div>
+
+	          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+	      	  <img src="images/tm-600x300-03.jpg" class="img-responsive">
+	      	   <div class="caption">
+                		<h3 class="bg-defaule">景点</h3>
+
+                 		<p class="text-muted">国内著名旅游景点,携程旅游,天天低价,全场0.1-8折!放心的服务,放心的价格,享6重旅游保障!出境游/团队游,产品多,线路全!旅游还是找携程!</p>
+             		</div>
+             		<div class="text-right">
+		               <button class="btn btn-success btn-xs">详述</button>
+		               <a href="images/tm-600x300-03.jpg"><button class="btn btn-info btn-xs">预览</button></a>
+	             	</div><br>
+	          </div>
+	   </div>
+
+		
+              <div class="row">
+                  <h2>风景分类</h2>
+              </div>
+              
+              <ul class="nav nav-tabs" > 
+                  <li  class="active"><a href="#home"   data-toggle="tab">景点1</a></li>
+                  <li ><a href="#profile"   data-toggle="tab">景点2</a></li>
+                  <li ><a href="#messages"  data-toggle="tab">景点3</a></li>
+                  <li ><a href="#settings"   data-toggle="tab">景点4</a></li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                  <div  class="tab-pane active" id="home">
+                      <div class="row">
+                          <div class="col-sm-8">
+                              <h3>景点介绍</h3>
+                              <p style="font-size:14px">地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，
+                                  对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。</p>
+                              <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                          </div>
+                          <div class="col-sm-4">
+                              <img src="images/tm-500x250-01.jpg" class="img-thumbnail" alt="景点1"/>
+                          </div>
+                      </div>
+                  </div>
+                  <div  class="tab-pane" id="profile">
+                      <div class="row">
+                          <div class="col-sm-8">
+                              <h3>景点介绍</h3>
+                              <p style="font-size:14px">.NET是 Microsoft XML Web services 平台。XML Web services 允许应用程序通过 Internet 进行通讯和共享数据，而不管所采用的是哪种操作
+                                  系统、设备或编程语言。Microsoft .NET 平台提供创建 XML Web services 并将这些服务集成在一起之所需。对个人用户的好处是无缝的、吸引人的体验。</p>
+                              <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                          </div>
+                          <div class="col-sm-4">
+                              <img src="images/tm-500x250-02.jpg" class="img-thumbnail" alt="景点2"/>
+                          </div>
+                      </div>
+                  </div>
+                  <div  class="tab-pane" id="messages">
+                      <div class="row">
+                          <div class="col-sm-8">
+                              <h3>景点介绍</h3>
+                              <p style="font-size:14px">ASP.NET MVC 4已经正式发布，并内置于Visual Studio 2012，
+                                  新版本ASP.NET MVC版本新增了手机模版、单页应用程序，Web API等模版，更新了一些 javascript 库，其中示例页面也使用了jquery的AJAX登录，
+                                  并增加了OAuth认证/Entity Framework5的支持。同时也增强了对HTML5、AsyncController等的支持。</p>
+                              <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                          </div>
+                          <div class="col-sm-4">
+                              <img src="images/tm-500x250-03.jpg" class="img-thumbnail" alt="景点3"/>
+                          </div>
+                      </div>
+                  </div>
+                  <div  class="tab-pane" id="settings">
+                      <div class="row">
+                          <div class="col-sm-8">
+                              <h3>景点介绍</h3>
+                              <p style="font-size:14px">Web GIS是Internet技术应用于GIS开发的产物，是现代GIS技术的重要组成部分。常见的Web GIS开发软件有超擎图形。
+                                  是一个交互式的、分布式的、动态的地理信息系统，是由多个主机、多个数据库的无线终端，并由客户机与服务器（HTTP服务器及应用服务器）相连所组成的。
+                                  GIS通过WWW功能得以扩展，真正成为一种大众使用的工具。
+                                  从WWW的任意一个节点，Internet用户可以浏览WebGIS站点中的空间数据、制作专题图，以及进行各种空间检索和空间分析，从而使GIS进入千家万户。</p>
+                              <p><a href="#" class="btn btn-success" role="button">详细了解</a></p>
+                          </div>
+                          <div class="col-sm-4">
+                              <img src="images/tm-500x250-01.jpg" class="img-thumbnail" alt="景点1"/>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+  		<footer class="footer navbar navbar-inverse footer-colors">              
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <p class="text-center footer-text">Copyright &copy;2017 ATtuing - Collect from </p> 
+                <p class="text-center footer-text"> 工信部备案号： 晋ICP备12345678号-1 </p>
+            	<p class="text-center footer-text"> 联系方式：qq:123456    邮箱：123@yang.cn </p>     </div>                
+        </footer>
+        </div>       
+</body>
+</html>

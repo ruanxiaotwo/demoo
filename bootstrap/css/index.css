@@ -1,0 +1,35 @@
+.header-nav{
+	margin-top: 50px;
+}
+.header-nav > a{
+	position: relative;
+	padding :0 10px;
+	display: inline-block;
+	transition: all .35s;
+}
+.header-nav >span{
+	position: relative;
+}
+.header-nav >span::after{
+	content: '';
+	position: absolute;
+	left: 100%;
+	top:0;
+	width:1px;
+	height: 16px;
+	background: #000;
+}
+.header-nav> a:hover{
+	color:pink;
+	transform: scale(1.1) translateY(-5px);
+	text-decoration: none;
+}
+.navbar{
+	background: url('/images/nav.jpg');
+}
+.navbar a{
+	font-family: 
+	padding: 14px;
+	color:#fff;
+	display: inline-block;
+}
